@@ -1,0 +1,18 @@
+{% extends 'newsapp/base.html' %}
+
+{% block title %}
+  {% if form.instance.pk %}
+    Edit Article
+  {% else %}
+    Create Article
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  <h2>{% if form.instance.pk %}Edit Article{% else %}Create Article{% endif %}</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+  </form>
+{% endblock %}

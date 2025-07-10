@@ -1,0 +1,21 @@
+{% extends 'newsapp/base.html' %}
+
+{% block title %}Admin - Manage Articles{% endblock %}
+
+{% block content %}
+  <a href="{% url 'article_create' %}" style="color:green; text-decoration:none; font-weight:bold; display:inline-block; margin-bottom: 20px;">+ Create New Article</a>
+
+  <ul>
+    {% for article in articles %}
+      <li>
+        <strong>{{ article.title }}</strong> ({{ article.publish_date|default:"Unpublished" }})
+        <span style="margin-left: 15px;">
+          <a href="{% url 'article_edit' article.pk %}">Edit</a> |
+          <a href="{% url 'article_delete' article.pk %}" style="color:red;">Delete</a>
+        </span>
+      </li>
+    {% empty %}
+      <li>No articles available.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

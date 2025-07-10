@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Published Articles</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #2c3e50;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+    }
+    article {
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+    }
+    h2 {
+      margin: 0;
+      color: #333;
+    }
+    small {
+      color: #888;
+    }
+    p {
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Published Articles</h1>
+  {% for article in articles %}
+    <article>
+      <h2>{{ article.title }}</h2>
+      <small>Published: {{ article.publish_date }}</small>
+      <p>{{ article.content }}</p>
+    </article>
+  {% empty %}
+    <p>No published articles.</p>
+  {% endfor %}
+</body>
+</html>
