@@ -30,6 +30,32 @@ The platform features:
 
 ---
 
+## SCREENSHOTS
+
+**LOGIN PAGE**
+
+![image](https://github.com/user-attachments/assets/369b8b7a-b98f-416e-aeb8-8e0d6a9249d1)
+
+**Article page**
+
+![image](https://github.com/user-attachments/assets/6b90eec4-fb7b-4d86-9540-b34343d952ce)
+
+**Form page**
+
+![image](https://github.com/user-attachments/assets/7e2d07fc-8fee-464f-b75e-c0a47722647b)
+
+**Deletion page**
+
+![image](https://github.com/user-attachments/assets/55a40c3f-cad9-43cb-b313-ef4ba0d36b59)
+
+**ADMIN PAGE**
+
+![image](https://github.com/user-attachments/assets/aee97303-c2ae-49c7-82c7-dab25e6cfea1)
+
+
+
+---
+
 ## Project Structure Highlights
 
 - `base.html`: Main template layout with navigation and authentication links.
